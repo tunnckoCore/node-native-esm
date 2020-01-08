@@ -1,0 +1,1 @@
+!function(e,n){"object"==typeof exports&&"undefined"!=typeof module?module.exports=(()=>123):"function"==typeof define&&define.amd?define(n):e.somePkg=(()=>123)}(this,function(){return()=>123});

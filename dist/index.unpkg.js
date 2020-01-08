@@ -1,0 +1,1 @@
+!function(e,o){"object"==typeof exports&&"undefined"!=typeof module?o(exports):"function"==typeof define&&define.amd?define(["exports"],o):o(e.tunnckocore.xyzXyzXyz={})}(this,function(e){const o=require("some-pkg");console.log(o())});

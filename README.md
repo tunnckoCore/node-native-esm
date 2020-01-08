@@ -49,3 +49,25 @@ Error [ERR_REQUIRE_ESM]: Must use import to load ES Module: /home/charlike/dev/n
 ```
 
 which isn't that clear what that error means... hell, i use imports everywhere?!
+
+3. If dist files are ending on `.cjs` and `.mjs`, the `main` and `exports.require` point to `.cjs` and
+`module` and `exports.import` points to the `.mjs` it still fails.
+
+```
+❯ node --experimental-conditional-exports src/index.mjs
+(node:87139) ExperimentalWarning: The ESM module loader is experimental.
+internal/modules/esm/default_resolve.js:96
+  let url = moduleWrapResolve(specifier, parentURL);
+            ^
+
+Error: Cannot resolve package main 'dist/index.esm.mjs' in/home/charlike/dev/node-native-esm/node_modules/some-pkg/package.json, imported from /home/charlike/dev/node-native-esm/src/index.mjs
+    at Loader.resolve [as _resolve] (internal/modules/esm/default_resolve.js:96:13)
+    at Loader.resolve (internal/modules/esm/loader.js:72:33)
+    at Loader.getModuleJob (internal/modules/esm/loader.js:156:40)
+    at ModuleWrap.<anonymous> (internal/modules/esm/module_job.js:42:40)
+    at link (internal/modules/esm/module_job.js:41:36) {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+```
+
+Which is complete nonsense, because all of the dist files in `./dist/` and `node_modules/some-pkg/dist` exist!

@@ -1,0 +1,12 @@
+{
+  "name": "some-pkg",
+  "version": "0.1.0",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "exports": {
+    ".": {
+      "require": "dist/index.cjs.js",
+      "import": "dist/index.esm.js"
+    }
+  }
+}

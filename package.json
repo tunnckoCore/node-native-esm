@@ -1,0 +1,16 @@
+{
+  "name": "@tunnckocore/xyz-xyz-xyz",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "exports": {
+    ".": {
+      "require": "dist/index.cjs.js",
+      "import": "dist/index.esm.js"
+    }
+  },
+  "dependencies": {
+    "some-pkg": "^0.1.0"
+  }
+}

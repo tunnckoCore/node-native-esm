@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "main": "dist/index.cjs.cjs",
-  "module": "dist/index.esm.jms",
+  "module": "dist/index.esm.mjs",
   "exports": {
     ".": {
       "require": "dist/index.cjs.cjs",

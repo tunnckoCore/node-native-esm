@@ -1,12 +1,14 @@
 {
   "name": "some-pkg",
   "version": "0.1.0",
-  "main": "dist/index.cjs.cjs",
-  "module": "dist/index.esm.mjs",
+  "type": "module",
+  "main": "./src/index.js",
+  "module": "./src/index.js",
+  "scripts": {
+    "build": "bundt"
+  },
   "exports": {
-    ".": {
-      "require": "dist/index.cjs.cjs",
-      "import": "dist/index.esm.mjs"
-    }
+    "require": "./dist/index.js",
+    "import": "./src/index.js"
   }
 }

@@ -2,20 +2,19 @@
   "name": "@tunnckocore/xyz-xyz-xyz",
   "version": "1.0.0",
   "license": "MIT",
+  "type": "module",
   "main": "dist/index.cjs.cjs",
   "module": "dist/index.esm.mjs",
   "exports": {
-    ".": {
-      "require": "dist/index.cjs.cjs",
-      "import": "dist/index.esm.mjs"
-    }
+    "require": "dist/index.cjs.cjs",
+    "import": "dist/index.esm.mjs"
   },
   "dependencies": {},
   "devDependencies": {
-    "bundt": "^0.4.0"
+    "bundt": "^1.0.0"
   },
   "scripts": {
-    "setup": "rm -rf node_modules && yarn && rm -rf node_modules/bundt && cp -R bundt-patched node_modules/bundt && cp -R some-pkg node_modules/some-pkg",
+    "setup": "rm -rf node_modules yarn.lock && yarn && cp -R some-pkg node_modules/some-pkg",
     "try": "node src/index.js"
   }
 }
